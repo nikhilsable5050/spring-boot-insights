@@ -11,6 +11,7 @@ public class MyAppApplication {
 		ApplicationContext context = SpringApplication.run(MyAppApplication.class, args);
 
 		Dev obj = context.getBean(Dev.class);
+
 		obj.build();
 
 	}
