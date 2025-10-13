@@ -5,10 +5,10 @@ import org.springframework.stereotype.Component;
 @Component
 
 public class Dev {
-    Laptop laptop;
+    //Laptop laptop;
     public void build(){
 
-        laptop.compile();
+        //laptop.compile();
         System.out.println("Working on awesome project");
     }
 }
