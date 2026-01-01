@@ -1,6 +1,5 @@
 🌱 Spring Boot Insights
 
-
 A personal collection of projects, notes, and experiments built while learning Spring Boot — exploring everything from basic REST APIs to advanced backend development concepts.
 
 🧠 About This Repository
