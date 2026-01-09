@@ -1,12 +1,13 @@
-package com.nikhilsable.beanprograms;
+package com.nikhilsable.demoApplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BeanProgramsApplication {
+public class DemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BeanProgramsApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 	}
+
 }
