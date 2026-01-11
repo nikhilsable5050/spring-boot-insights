@@ -2,13 +2,12 @@ package com.nikhilsable.Spring.Boot.Layered.Architecture.controllers;
 
 
 import com.nikhilsable.Spring.Boot.Layered.Architecture.dto.EmployeeDTO;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 
 @RestController
+@RequestMapping(path = "/employees")
 public class EmployeeController {
 
 //    @GetMapping(path = "/getSecretMessage")
@@ -17,9 +16,15 @@ public class EmployeeController {
 //    }
 
 
-    @GetMapping(path = "/employees/{employeeId}")
+    @GetMapping(path = "/{employeeId}")
     public EmployeeDTO getEmployeeById (@PathVariable Long employeeId){
         return new EmployeeDTO(employeeId, "nikhil" ,"niks@gmail.com",21, LocalDate.of(2026,1,2),true);
-
     }
+
+    @GetMapping
+    public String getAllEmployees(@RequestParam(required = false , name = "inputAge") Integer age,
+                                  @RequestParam(required = false) String sortBy){
+        return "Hii age "+ age + " " + sortBy;
+    }
+
 }
