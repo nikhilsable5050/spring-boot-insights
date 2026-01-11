@@ -27,4 +27,8 @@ public class EmployeeController {
         return "Hii age "+ age + " " + sortBy;
     }
 
+    @PostMapping
+    public String createNewEmployee(){
+        return "Hello from POST";
+    }
 }
