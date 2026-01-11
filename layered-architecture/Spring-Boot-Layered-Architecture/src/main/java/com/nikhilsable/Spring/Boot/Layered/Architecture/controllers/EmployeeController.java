@@ -31,4 +31,9 @@ public class EmployeeController {
     public String createNewEmployee(){
         return "Hello from POST";
     }
+
+    @PutMapping
+    public String updateEmployeeById(){
+        return "Hello from PUT";
+    }
 }
