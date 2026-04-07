@@ -22,7 +22,8 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
-        http.authorizeHttpRequests((requests) -> requests
+        http.authorizeHttpRequests((requests) ->
+                requests.requestMatchers("h2-console/**").permitAll()
                 .anyRequest().authenticated()
         );
         http.sessionManagement(session
