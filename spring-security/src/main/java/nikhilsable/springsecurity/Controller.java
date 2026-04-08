@@ -23,4 +23,6 @@ public class Controller {
     public String adminEndpoint(){
         return "Hello, admin";
     }
+
+
 }
