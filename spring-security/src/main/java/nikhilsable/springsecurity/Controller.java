@@ -7,22 +7,20 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Controller {
 
-    @GetMapping("hi")
-    public String hii(){
+    @GetMapping("/hi")
+    public String hii() {
         return "Hi";
     }
 
     @PreAuthorize("hasRole('USER')")
     @GetMapping("/user")
-    public String userEndpoint(){
+    public String userEndpoint() {
         return "Hello, user";
     }
 
     @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/admin")
-    public String adminEndpoint(){
+    public String adminEndpoint() {
         return "Hello, admin";
     }
-
-
 }
