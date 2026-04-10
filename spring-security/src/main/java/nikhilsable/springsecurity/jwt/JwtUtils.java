@@ -13,7 +13,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.crypto.SecretKey;
 import java.util.Date;
 
-@Component // ✅ IMPORTANT
+@Component
 public class JwtUtils {
 
     private static final Logger logger = LoggerFactory.getLogger(JwtUtils.class);
@@ -24,7 +24,7 @@ public class JwtUtils {
     @Value("${spring.app.jwtExpirationMs}")
     private int jwtExpirationMs;
 
-    // ✅ Get JWT from header
+    // Get JWT from header
     public String getJwtFromHeader(HttpServletRequest request) {
         String bearerToken = request.getHeader("Authorization");
         logger.debug("Authorization Header: {}", bearerToken);
@@ -35,7 +35,7 @@ public class JwtUtils {
         return null;
     }
 
-    // ✅ Generate token
+    // Generate token
     public String generateTokenFromUsername(UserDetails userDetails) {
         String username = userDetails.getUsername();
 
@@ -47,7 +47,7 @@ public class JwtUtils {
                 .compact();
     }
 
-    // ✅ Extract username
+    // Extract username
     public String getUserNameFromJWTToken(String token) {
         return Jwts.parser()
                 .verifyWith(key()) // ✅ FIXED
@@ -57,14 +57,14 @@ public class JwtUtils {
                 .getSubject();
     }
 
-    // ✅ Generate key
+    // Generate key
     public SecretKey key() {
         return Keys.hmacShaKeyFor(
                 Decoders.BASE64.decode(jwtSecret)
         );
     }
 
-    // ✅ Validate token
+    // Validate token
     public boolean validateJwtToken(String authToken) {
         try {
             Jwts.parser()
