@@ -1,5 +1,7 @@
 package nikhilsable.springsecurity;
 
+import nikhilsable.springsecurity.jwt.AuthTokenFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -22,12 +24,21 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableMethodSecurity
 public class SecurityConfig {
 
+    @Autowired
+    private DataSource dataSource;
+
+    @Bean
+    private AuthTokenFilter authenticationJwtTokenFilter() {
+        return new AuthTokenFilter();
+    }
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers("/hi", "/h2-console/**").permitAll()
+                        .requestMatchers("/api/signin").permitAll()
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session ->
