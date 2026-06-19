@@ -1,44 +1,57 @@
-🌱 Spring Boot Insights
-
+# 🌱 Spring Boot Insights
 
 A personal collection of projects, notes, and experiments built while learning Spring Boot — exploring everything from basic REST APIs to advanced backend development concepts.
 
+---
 
-🧠 About This Repository
+## 🚀 Topics Covered
 
-This repository serves as my learning log for mastering Spring Boot and related technologies in the Java ecosystem.
-Each folder or module demonstrates a focused concept with clear explanations and practical examples.
+* Spring Boot Fundamentals
+* RESTful API Development
+* Spring MVC & Thymeleaf
+* Spring Data JPA & Hibernate
+* Dependency Injection & Bean Lifecycle
+* Exception Handling & Validation
+* Spring Security
+* JWT Authentication
+* Microservices with Spring Cloud *(Upcoming)*
 
+---
 
-🏗️ Topics Covered / Planned
+## 🛠 Tech Stack
 
-✅ Spring Boot Fundamentals
-✅ RESTful API Development
-✅ Spring MVC & Thymeleaf
-✅ Spring Data JPA & Hibernate
-✅ Dependency Injection & Bean Lifecycle
-✅ Exception Handling & Validation
-✅ Spring Security
-✅ JWT Authentication
-🔄 Microservices with Spring Cloud (Upcoming)
+* Java
+* Spring Boot
+* Spring MVC
+* Spring Data JPA
+* Hibernate
+* Spring Security
+* JWT
+* MySQL
+* Maven
 
+---
 
-⚙️ Tech Stack
+## 📘 Learning Goals
 
-Language: Java
-Framework: Spring Boot
+* Strengthen understanding of Spring Boot architecture
+* Build production-ready REST APIs
+* Explore database integration and security
+* Learn backend development best practices
+* Prepare for Java Backend Developer interviews
 
+---
 
-📘 Learning Goals
+## 🧩 Future Additions
 
-Strengthen understanding of Spring Boot architecture
-Build production-ready REST APIs
-Explore database integration, security, and microservices
-Prepare for backend developer interviews
+* React Frontend Integration
+* Docker Containerization
+* Unit & Integration Testing
+* Swagger/OpenAPI Documentation
+* Spring Cloud Microservices
 
+---
 
-🧩 Future Additions
+## 👨‍💻 Author
 
-Integration with React frontend
-Docker setup for containerization
-Unit & Integration testing with JUnit & Mockito
+**Nikhil Sable**
