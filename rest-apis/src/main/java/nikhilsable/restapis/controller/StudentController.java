@@ -3,10 +3,9 @@ package nikhilsable.restapis.controller;
 import lombok.RequiredArgsConstructor;
 import nikhilsable.restapis.entity.Student;
 import nikhilsable.restapis.service.StudentServiceImpl;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -20,4 +19,8 @@ public class StudentController {
         return studentService.creatStudent(student);
     }
 
+    @GetMapping
+    public List<Student> getAllStudents(){
+        return studentService.getAllStudents();
+    }
 }
